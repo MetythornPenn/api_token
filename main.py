@@ -17,6 +17,7 @@ class SecureDataRequest(BaseModel):
 
 API_KEY = "apikey"
 API_KEY_NAME = "access_token"
+
 api_key_header = APIKeyHeader(name=API_KEY_NAME, auto_error=False)
 
 async def get_api_key(api_key_header: str = Security(api_key_header)):
