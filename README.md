@@ -4,6 +4,12 @@
 ### How to run service 
 
 ```bash
+# generate key
+python generate_api_key.py
+
+# copy key to .env 
+API_KEY = 
+
 # build images
 docker compose up -d --build
 
