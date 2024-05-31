@@ -5,7 +5,7 @@
 
 ```bash
 # generate key
-python generate_api_key.py
+python gen_key.py
 
 # copy key to .env 
 API_KEY = 
