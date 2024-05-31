@@ -11,6 +11,7 @@ services:
       - "2000:80"
     depends_on:
       - api_1
+      - api_2
 
   api_1:
     build:
@@ -25,9 +26,6 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    environment:
-      - API_KEY=apikey
-      - API_KEY_NAME=access_token
     volumes:
       - .:/app
     command: uvicorn main:app --host 0.0.0.0 --port 80 --reload
